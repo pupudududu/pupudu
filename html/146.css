@@ -1,0 +1,44 @@
+{
+   marg: 0
+   padding: 0
+}
+:root{
+   --margin-top: 0;
+   --margin-left: 0;
+   --animation-duration: 0s;
+   --animation-delay: 0s;
+
+}
+body{
+height:  100vh;
+display:  flex;
+justify-content:  center;
+align-items:  center;
+background-color:  #111;
+overflow:  hidden;
+perspective:  1300pt;
+}
+div{
+divtransform-style: preserve-3d;
+}
+.word-box,
+.word-box .word{
+position: absolute;
+animation: rotY 0s linear infinite;
+animation-duration: var(--animation-duration);
+animation-delay: var(--animation-delay);
+}
+.word-box{
+margin-top: var(--margin-top);
+}
+.word-box .word{
+margin-left: var(--margin-left);
+}
+.word-box .word{
+animation-direction: reverse;
+}
+@keyframes rotY {
+to{
+transform: rotateY(1turn);
+}
+}
